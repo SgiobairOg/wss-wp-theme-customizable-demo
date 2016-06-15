@@ -1,0 +1,10 @@
+{
+  "name": "tol-cws/wp-theme-skeleton",
+  "require": {
+    "php": ">=5.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "phing/phing": "^2.13"
+  }
+}

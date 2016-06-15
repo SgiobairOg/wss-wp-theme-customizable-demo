@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Set some basic project information and targets -->
+<project name="CWS WordPress Theme" default="build" basedir=".">
+
+    <property name="bin.dir" value="${project.basedir}/vendor/bin" override="true" />
+    <property name="reports.dir" value="${project.basedir}/reports" override="true" />
+
+    <target name="build" depends="clean, prepare, defaults, phplint" />
+
+    <!-- Clean up from previous builds -->
+    <target name="clean" description="Cleanup build artifacts">
+        <delete dir="${reports.dir}" />
+    </target>
+
+    <!-- Prepare for the new build -->
+    <target name="prepare" depends="clean" description="Prepare for build">
+        <mkdir dir="${reports.dir}" />
+    </target>
+
+    <!-- Check for default values -->
+    <target name="defaults">
+        <echo msg="Checking for default values from the skeleton project..." />
+        <exec command="grep -ir 'CWS WordPress Theme Skeleton' style.css" returnProperty="found.default-theme-name" />
+        <if>
+            <equals arg1="${found.default-theme-name}" arg2="1" />
+            <else>
+                <fail msg="Default theme name found." />
+            </else>
+        </if>
+        <exec command="grep -ir 'tol-cws/wp-theme-skeleton' composer.json" returnProperty="found.default-composer-name" />
+        <if>
+            <equals arg1="${found.default-composer-name}" arg2="1" />
+            <else>
+                <fail msg="Default composer package name found." />
+            </else>
+        </if>
+    </target>
+
+    <!-- PHP Lint -->
+    <target name="phplint">
+        <phplint haltonfailure="true" deprecatedAsError="true">
+            <fileset dir="${project.basedir}">
+                <include name="*.php"/>
+            </fileset>
+        </phplint>
+    </target>
+
+</project>
