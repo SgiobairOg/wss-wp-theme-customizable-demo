@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Set some basic project information and targets -->
 <project name="CWS WordPress Theme" default="build" basedir=".">
 
+    <!-- Set some basic project information and targets -->
     <property name="bin.dir" value="${project.basedir}/vendor/bin" override="true" />
     <property name="reports.dir" value="${project.basedir}/reports" override="true" />
 
-    <target name="build" depends="clean, prepare, defaults, phplint" />
+    <target name="build" depends="clean, prepare, check-defaults, phplint" description="Builds the theme"/>
 
     <!-- Clean up from previous builds -->
-    <target name="clean" description="Cleanup build artifacts">
+    <target name="clean" hidden="true">
         <delete dir="${reports.dir}" />
     </target>
 
     <!-- Prepare for the new build -->
-    <target name="prepare" depends="clean" description="Prepare for build">
+    <target name="prepare" depends="clean" hidden="true">
         <mkdir dir="${reports.dir}" />
     </target>
 
     <!-- Check for default values -->
-    <target name="defaults">
+    <target name="check-defaults">
         <echo msg="Checking for default values from the skeleton project..." />
         <exec command="grep -ir 'CWS WordPress Theme Skeleton' style.css" returnProperty="found.default-theme-name" />
         <if>
