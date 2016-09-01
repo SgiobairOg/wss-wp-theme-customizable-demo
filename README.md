@@ -37,6 +37,6 @@ CSS, JavaScript, and images should exist in the directories reserved for those r
 
 # Packaging
 To prepare your theme for installation, use the `package` build target and pass the theme slug as an argument. For example:
-```
+```bash
 ./vendor/bin/phing -Dtheme.slug=my-theme package -verbose # this will produce a my-theme.zip in the project root
 ```
