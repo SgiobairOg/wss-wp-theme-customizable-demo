@@ -4,8 +4,10 @@
     <!-- Set some basic project information and targets -->
     <property name="bin.dir" value="${project.basedir}/vendor/bin" override="true" />
     <property name="reports.dir" value="${project.basedir}/reports" override="true" />
+    <property name="theme.slug" value="" override="true" />
 
-    <target name="build" depends="clean, prepare, check-defaults, phplint" description="Builds the theme"/>
+    <!-- For running the complete project build -->
+    <target name="build" depends="clean, prepare, check-defaults, check-required, phplint" description="Runs the complete project build"/>
 
     <!-- Clean up from previous builds -->
     <target name="clean" hidden="true">
@@ -19,21 +21,35 @@
 
     <!-- Check for default values -->
     <target name="check-defaults">
-        <echo msg="Checking for default values from the skeleton project..." />
-        <exec command="grep -ir 'CWS WordPress Theme Skeleton' style.css" returnProperty="found.default-theme-name" />
+        <echo msg="Checking for default values from the template project..." />
+        <exec command="grep -ir 'CWS WordPress Theme Template' style.css" returnProperty="found.default-theme-name" />
         <if>
             <equals arg1="${found.default-theme-name}" arg2="1" />
             <else>
-                <fail msg="Default theme name found." />
+                <fail msg="Please change the theme name in the style.css file so that it is site-specific." />
             </else>
         </if>
-        <exec command="grep -ir 'tol-cws/wp-theme-skeleton' composer.json" returnProperty="found.default-composer-name" />
+        <exec command="grep -ir 'tol-cws/wp-theme-template' composer.json" returnProperty="found.default-composer-name" />
         <if>
             <equals arg1="${found.default-composer-name}" arg2="1" />
             <else>
-                <fail msg="Default composer package name found." />
+                <fail msg="Please change the value of the name field in the composer.json file so that it is specific to the theme." />
             </else>
         </if>
+        <echo msg="Default values not found!"/>
+    </target>
+
+    <!-- Check for required values -->
+    <target name="check-required">
+        <echo msg="Checking for required theme values..." />
+        <exec command="grep -ir 'cws-content-manager' content-*.php" returnProperty="found.required-theme-action" />
+        <if>
+            <equals arg1="${found.required-theme-action}" arg2="0" />
+            <else>
+                <fail msg="Please add a call to the cws-content-manager action to your theme's content partials." />
+            </else>
+        </if>
+        <echo msg="Found all required values!"/>
     </target>
 
     <!-- PHP Lint -->
@@ -43,6 +59,22 @@
                 <include name="*.php"/>
             </fileset>
         </phplint>
+    </target>
+
+    <!-- Package the theme for installation -->
+    <target name="package">
+        <exec executable="zip">
+            <arg value="-r" />
+            <arg value="${theme.slug}.zip" />
+            <arg value="." />
+            <arg value="--exclude=\.idea\*" />
+            <arg value="--exclude= *\.iml" />
+            <arg value="--exclude=\.git\*" />
+            <arg value="--exclude=tests\*" />
+            <arg value="--exclude=less\*" />
+            <arg value="--exclude=*\.md" />
+            <arg value="--exclude=build.xml" />
+        </exec>
     </target>
 
 </project>

@@ -1,0 +1,1 @@
+<?php do_action( 'cws-content-manager' ); ?>

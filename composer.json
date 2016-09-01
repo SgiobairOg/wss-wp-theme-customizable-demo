@@ -1,5 +1,5 @@
 {
-  "name": "tol-cws/wp-theme-skeleton",
+  "name": "tol-cws/wp-theme-template",
   "require": {
     "php": ">=5.6"
   },
