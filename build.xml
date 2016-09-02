@@ -42,11 +42,11 @@
     <!-- Check for required values -->
     <target name="check-required">
         <echo msg="Checking for required theme values..." />
-        <exec command="grep -ir 'cws-content-manager' content-*.php" returnProperty="found.required-theme-action" />
+        <exec command="grep -ir 'cws-content' home.php page*.php" returnProperty="found.required-theme-action" />
         <if>
             <equals arg1="${found.required-theme-action}" arg2="0" />
             <else>
-                <fail msg="Please add a call to the cws-content-manager action to your theme's content partials." />
+                <fail msg="Please add a call to the cws-content action to your theme's home and page template files." />
             </else>
         </if>
         <echo msg="Found all required values!"/>
@@ -54,11 +54,13 @@
 
     <!-- PHP Lint -->
     <target name="phplint">
-        <phplint haltonfailure="true" deprecatedAsError="true">
+        <echo msg="Linting files..." />
+        <phplint haltonfailure="true" tofile="${reports.dir}/phplint.log" deprecatedAsError="true">
             <fileset dir="${project.basedir}">
                 <include name="*.php"/>
             </fileset>
         </phplint>
+        <echo msg="No errors found!"/>
     </target>
 
     <!-- Package the theme for installation -->
