@@ -70,6 +70,7 @@
             <arg value="--exclude=\.idea\*" />
             <arg value="--exclude= *\.iml" />
             <arg value="--exclude=\.git\*" />
+            <arg value="--exclude=reports\*" />
             <arg value="--exclude=tests\*" />
             <arg value="--exclude=less\*" />
             <arg value="--exclude=*\.md" />
