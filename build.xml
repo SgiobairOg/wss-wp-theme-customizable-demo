@@ -7,7 +7,7 @@
     <property name="theme.slug" value="" override="true" />
 
     <!-- For running the complete project build -->
-    <target name="build" depends="clean, prepare, check-defaults, check-required, phplint" description="Runs the complete project build"/>
+    <target name="build" depends="clean, prepare, check-defaults, check-required-actions, phplint" description="Runs the complete project build"/>
 
     <!-- Clean up from previous builds -->
     <target name="clean" hidden="true">
@@ -40,7 +40,7 @@
     </target>
 
     <!-- Check for required values -->
-    <target name="check-required">
+    <target name="check-required-actions">
         <echo msg="Checking for required theme values..." />
         <exec command="grep -ir 'cws-content' home.php page*.php" returnProperty="found.required-theme-action" />
         <if>
