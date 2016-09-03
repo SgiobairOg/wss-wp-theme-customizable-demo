@@ -21,7 +21,7 @@ git clone --depth 1 git@github.dominionenterprises.com:TOL-CWS/wp-theme-template
 ```
 
 ### Change the remote
-Change the shallow clone's remote to that of your new plugin's repository by executing the following commands:
+Change the shallow clone's remote to that of your new theme's repository by executing the following commands:
 ```
 cd <project-name>
 git remote rm origin
