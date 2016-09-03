@@ -17,7 +17,7 @@ organization.
 To use the template files without copying all of the unnecessary git history associated with the template repository,
 do a shallow clone of this repository by executing the following command:
 ```
-git clone --depth 1 git@github.dominionenterprises.com:TOL-CWS/wp-theme-template.git wp-plugin-<project name>
+git clone --depth 1 git@github.dominionenterprises.com:TOL-CWS/wp-theme-template.git wp-theme-<project name>
 ```
 
 ### Change the remote
