@@ -29,7 +29,7 @@
                 <fail msg="Please change the theme name in the style.css file so that it is site-specific." />
             </else>
         </if>
-        <exec command="grep -ir 'tol-cws/wp-theme-template' composer.json" returnProperty="found.default-composer-name" />
+        <exec command="grep -ir 'tol-cws-sites/wp-theme-template' composer.json" returnProperty="found.default-composer-name" />
         <if>
             <equals arg1="${found.default-composer-name}" arg2="1" />
             <else>
@@ -42,11 +42,11 @@
     <!-- Check for required values -->
     <target name="check-required-actions">
         <echo msg="Checking for required theme values..." />
-        <exec command="grep -ir 'cws-content' home.php page*.php" returnProperty="found.required-theme-action" />
+        <exec command="grep -ir 'cws_content' index.php page*.php" returnProperty="found.required-theme-action" />
         <if>
             <equals arg1="${found.required-theme-action}" arg2="0" />
             <else>
-                <fail msg="Please add a call to the cws-content action to your theme's home and page template files." />
+                <fail msg="Please add a call to the cws_content action to all of your theme's template files." />
             </else>
         </if>
         <echo msg="Found all required values!"/>
@@ -61,23 +61,6 @@
             </fileset>
         </phplint>
         <echo msg="No errors found!"/>
-    </target>
-
-    <!-- Package the theme for installation -->
-    <target name="package">
-        <exec executable="zip">
-            <arg value="-r" />
-            <arg value="${theme.slug}.zip" />
-            <arg value="." />
-            <arg value="--exclude=\.idea\*" />
-            <arg value="--exclude= *\.iml" />
-            <arg value="--exclude=\.git\*" />
-            <arg value="--exclude=reports\*" />
-            <arg value="--exclude=tests\*" />
-            <arg value="--exclude=less\*" />
-            <arg value="--exclude=*\.md" />
-            <arg value="--exclude=build.xml" />
-        </exec>
     </target>
 
 </project>
