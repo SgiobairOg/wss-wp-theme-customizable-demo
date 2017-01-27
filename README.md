@@ -8,7 +8,7 @@ The template is a starting point for creating custom themes. Consult [WordPress'
 ## Setup
 **NOTE: Do not fork this repository to start a new plugin!!!**
 
-## Create your theme's repository
+### Create your theme's repository
 If your theme's repository hasn't already been created for you, create it in the [TOL-CWS-Sites](https://github.dominionenterprises.com/TOL-CWS-Sites) organization. The naming convention for theme repositories is as follows:
 
  ```
@@ -17,10 +17,10 @@ If your theme's repository hasn't already been created for you, create it in the
  
 `<domain>` should be replaced with the domain name of the site being replicated. For example, if you are creating a theme for `mysite.com`, the name of the theme's repository must be `wp-theme-mysite.com`.
 
-## Create your fork
+### Create your fork
 Once the repository has been created, fork it. All of your work will be done in your fork. Follow the [CWS Product Team Workkflow](https://github.dominionenterprises.com/TOL-CWS/handbook/blob/master/development/Workflow.md) when making changes.
 
-## Add your initial files 
+### Add your initial files 
 Using this repository as a starting point, create the files you'll need for your theme by performing the following commands:
 ```
 cd </path/to/your/projects>
