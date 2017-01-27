@@ -6,7 +6,7 @@ The template is a starting point for creating custom themes. Consult [WordPress'
 * The template uses a strict file organization scheme that makes it easy to organize the files that compose the theme.
 
 ## Setup
-**Do not fork this repository to start a new plugin!!!**
+**NOTE: Do not fork this repository to start a new plugin!!!**
 
 ### Create and fork the repository
 Create a repository in the TOL-CWS-Sites organization whose name follows this naming convention:
