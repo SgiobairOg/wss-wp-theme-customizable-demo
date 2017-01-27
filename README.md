@@ -8,17 +8,20 @@ The template is a starting point for creating custom themes. Consult [WordPress'
 ## Setup
 **NOTE: Do not fork this repository to start a new plugin!!!**
 
-### Create and fork the repository
-Create a repository in the TOL-CWS-Sites organization whose name follows this naming convention:
-```wp-theme-<project name>```
+## Create your theme's repository
+If your theme's repository hasn't already been created for you, create it in the [TOL-CWS-Sites](https://github.dominionenterprises.com/TOL-CWS-Sites) organization. The naming convention for theme repositories is as follows:
 
-When creating the repository, be sure to click on the option that asks you to "Initialize this repository with a README".
+ ```
+ wp-theme-<domain>
+ ```
+ 
+`<domain>` should be replaced with the domain name of the site being replicated. For example, if you are creating a theme for `mysite.com`, the name of the theme's repository must be `wp-theme-mysite.com`.
 
-Once the repository has been created, fork it in your account.
+## Create your fork
+Once the repository has been created, fork it. All of your work will be done in your fork. Follow the [CWS Product Team Workkflow](https://github.dominionenterprises.com/TOL-CWS/handbook/blob/master/development/Workflow.md) when making changes.
 
-### Clone the template
-To use the template files without copying all of the unnecessary git history associated with the template repository,
-do a shallow clone of this repository by executing the following command:
+## Add your initial files 
+Using this repository as a starting point, create the files you'll need for your theme by performing the following commands:
 ```
 cd </path/to/your/projects>
 git clone git@github.dominionenterprises.com:TOL-CWS-Sites/wp-theme-template wp-theme-<domain>
