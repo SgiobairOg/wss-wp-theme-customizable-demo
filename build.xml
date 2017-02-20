@@ -7,7 +7,7 @@
     <property name="theme.slug" value="" override="true" />
 
     <!-- For running the complete project build -->
-    <target name="build" depends="clean, prepare, check-defaults, check-required-actions, phplint" description="Runs the complete project build"/>
+    <target name="build" depends="clean, prepare, check-defaults, check-hooks, phplint" description="Runs the complete project build"/>
 
     <!-- Clean up from previous builds -->
     <target name="clean" hidden="true">
@@ -29,7 +29,7 @@
                 <fail msg="Please change the theme name in the style.css file so that it is site-specific." />
             </else>
         </if>
-        <exec command="grep -ir 'tol-cws-sites/wp-theme-template' composer.json" returnProperty="found.default-composer-name" />
+        <exec command="grep -ir 'tol-cws/wp-theme-template' composer.json" returnProperty="found.default-composer-name" />
         <if>
             <equals arg1="${found.default-composer-name}" arg2="1" />
             <else>
@@ -39,17 +39,35 @@
         <echo msg="Default values not found!"/>
     </target>
 
-    <!-- Check for required values -->
-    <target name="check-required-actions">
-        <echo msg="Checking for required theme values..." />
-        <exec command="grep -ir 'cws_content' index.php page*.php" returnProperty="found.required-theme-action" />
+    <!-- Check for required hooks -->
+    <target name="check-hooks">
+        <echo msg="Checking for required content action..." />
+        <exec command="grep -r 'cws_content' index.php page*.php" returnProperty="found.required-content-action" />
         <if>
-            <equals arg1="${found.required-theme-action}" arg2="0" />
+            <equals arg1="${found.required-content-action}" arg2="0" />
             <else>
-                <fail msg="Please add a call to the cws_content action to all of your theme's template files." />
+                <fail msg="Please add a call to the cws_content action to your theme's template files." />
             </else>
         </if>
-        <echo msg="Found all required values!"/>
+        <echo msg="Found a call to the content action!"/>
+        <echo msg="Checking for wp_head()..." />
+        <exec command="grep 'wp_head' header.php" returnProperty="found.required-header-hook" />
+        <if>
+            <equals arg1="${found.required-header-hook}" arg2="0" />
+            <else>
+                <fail msg="Please add a call to the wp_head() function in your header.php file." />
+            </else>
+        </if>
+        <echo msg="Found wp_head()!"/>
+        <echo msg="Checking for wp_footer()..." />
+        <exec command="grep 'wp_footer' footer.php" returnProperty="found.required-footer-hook" />
+        <if>
+            <equals arg1="${found.required-footer-hook}" arg2="0" />
+            <else>
+                <fail msg="Please add a call to the wp_footer() function in your footer.php file." />
+            </else>
+        </if>
+        <echo msg="Found wp_footer()!"/>
     </target>
 
     <!-- PHP Lint -->
@@ -61,6 +79,23 @@
             </fileset>
         </phplint>
         <echo msg="No errors found!"/>
+    </target>
+
+    <!-- Package the theme for installation -->
+    <target name="package">
+        <exec executable="zip">
+            <arg value="-r" />
+            <arg value="${theme.slug}.zip" />
+            <arg value="." />
+            <arg value="--exclude=\.idea\*" />
+            <arg value="--exclude= *\.iml" />
+            <arg value="--exclude=\.git\*" />
+            <arg value="--exclude=reports\*" />
+            <arg value="--exclude=tests\*" />
+            <arg value="--exclude=less\*" />
+            <arg value="--exclude=*\.md" />
+            <arg value="--exclude=build.xml" />
+        </exec>
     </target>
 
 </project>
