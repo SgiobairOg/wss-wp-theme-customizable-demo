@@ -1,11 +1,13 @@
+
 <?php get_header(); ?>
 
 <?php
-    $model = get_query_var( 'model' );
-    if ( !$model ) {
+    $id = get_query_var('id');
+    if (!$id) {
         do_action( 'cws_content' );
     }
-    do_action( 'cws_inventory' );
+    do_action( 'cws_promotions' );
 ?>
 
 <?php get_footer(); ?>
+
