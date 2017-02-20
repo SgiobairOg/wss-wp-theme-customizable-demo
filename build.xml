@@ -51,7 +51,7 @@
         </if>
         <echo msg="Found a call to the content action!"/>
         <echo msg="Checking for wp_head()..." />
-        <exec command="grep 'wp_head' header.php" returnProperty="found.required-header-hook" />
+        <exec command="grep 'wp_head()' header.php" returnProperty="found.required-header-hook" />
         <if>
             <equals arg1="${found.required-header-hook}" arg2="0" />
             <else>
@@ -60,7 +60,7 @@
         </if>
         <echo msg="Found wp_head()!"/>
         <echo msg="Checking for wp_footer()..." />
-        <exec command="grep 'wp_footer' footer.php" returnProperty="found.required-footer-hook" />
+        <exec command="grep 'wp_footer()' footer.php" returnProperty="found.required-footer-hook" />
         <if>
             <equals arg1="${found.required-footer-hook}" arg2="0" />
             <else>
