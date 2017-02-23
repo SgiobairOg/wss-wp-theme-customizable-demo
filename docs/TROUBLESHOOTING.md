@@ -7,7 +7,7 @@ If the HTTP status code of the error beings with a **5** (e.g. 500), then there 
 
 1. Deactivate your theme. If the problem goes away, then there is something wrong with your theme. Troubleshoot your theme. If the problem persists, then it is most likely a plugin issue. Continue to the next step.
 2. Deactivate all of your plugins. If the problem persists, then there is a larger issue. Notify your manager. If the problem goes away, continue to the next step.
-3. Activate a plugin. If the problem re-emerges, the issue is with that plugin. Notify your manager. If the problem doesn't yet re-emerge, continue re-activating plugins until it does, then notify your manager once you have identified the problematic plugin.
+3. Activate a plugin. If the problem re-emerges, the issue is with that plugin. Notify your manager. If the problem doesn't yet re-emerge, continue re-activating plugins one by one until you see the problem again, then notify your manager once you have identified the problematic plugin.
 
 ## There is extra whitespace in my content.
 If you find that extra whitespace is being added to content when copying it over into WordPress, try first copying the content into Notepad, then copying it from Notepad to WordPress. Notepad should remove any miscellaneous spaces that may exist within the content. If that doesn't work, remove any spaces between lines in the content, as WordPress may add `<p></p>` tags to empty lines.
