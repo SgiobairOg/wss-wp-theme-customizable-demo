@@ -4,6 +4,9 @@ The template is a starting point for creating custom themes.
 ## Setup
 **NOTE: Do not fork this repository to start a new plugin!!!**
 
+## Set up your local environment
+If you haven't done so already, follow the instructions in [vagrant-wordpress](https://github.dominionenterprises.com/TOL-CWS-Sites/vagrant-wordpress) to install WordPress on your machine.
+
 ### Create your theme's repository
 If your theme's repository hasn't already been created for you, create it in the [TOL-CWS-Sites](https://github.dominionenterprises.com/TOL-CWS-Sites) organization and include a README.md file during creation. The naming convention for theme repositories is as follows:
 
@@ -19,7 +22,7 @@ Once the repository has been created, fork it. All of your work will be done in 
 ### Add your initial files 
 Using this repository as a starting point, create the files you'll need for your theme by performing the following commands:
 ```bash
-cd </path/to/your/projects>
+cd </path/to/your/themes>
 git clone git@github.dominionenterprises.com:TOL-CWS-Sites/wp-theme-template wp-theme-<domain>
 cd wp-theme-<domain>
 git remote rm origin
