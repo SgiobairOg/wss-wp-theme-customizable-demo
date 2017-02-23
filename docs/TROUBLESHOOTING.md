@@ -4,6 +4,7 @@
 If the HTTP status code of the error begins with a **4** (e.g. 404), then you need to make sure that vagrant is running. Try running `vagrant up`.
 
 If the HTTP status code of the error beings with a **5** (e.g. 500), then there is either something wrong with your theme or with one of the plugins. Follow these instructions:
+
 1. Deactivate your theme. If the problem goes away, then there is something wrong with your theme. Troubleshoot your theme. If the problem persists, then it is most likely a plugin issue. Continue to the next step.
 2. Deactivate all of your plugins. If the problem persists, then there is a larger issue. Notify your manager. If the problem goes away, continue to the next step.
 3. Activate a plugin. If the problem re-emerges, the issue is with that plugin. Notify your manager. If the problem doesn't yet re-emerge, continue re-activating plugins until it does, then notify your manager once you have identified the problematic plugin.
