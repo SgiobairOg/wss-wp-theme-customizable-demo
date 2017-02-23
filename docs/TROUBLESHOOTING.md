@@ -1,7 +1,7 @@
 # Troubleshooting Guide
 
 ## I can't see my site when I go to http://192.168.10.33.
-If the HTTP status code of the error begins with a **4** (e.g. 404), then you need to make sure that vagrant is running. Try running `vagrat up`.
+If the HTTP status code of the error begins with a **4** (e.g. 404), then you need to make sure that vagrant is running. Try running `vagrant up`.
 
 If the HTTP status code of the error beings with a **5** (e.g. 500), then there is either something wrong with your theme or with one of the plugins. Follow these instructions:
 1. Deactivate your theme. If the problem goes away, then there is something wrong with your theme. Troubleshoot your theme. If the problem persists, then it is most likely a plugin issue. Continue to the next step.
