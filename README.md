@@ -1,9 +1,5 @@
 # CWS WordPress Theme Template
-The template is a starting point for creating custom themes. Consult [WordPress' Theme Handbook](https://developer.wordpress.org/themes/) for development best practices.
-
-## Features
-* The template is based on the [Plugin API](http://codex.wordpress.org/Plugin_API), [Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards), and [Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/).
-* The template uses a strict file organization scheme that makes it easy to organize the files that compose the theme.
+The template is a starting point for creating custom themes.
 
 ## Setup
 **NOTE: Do not fork this repository to start a new plugin!!!**
