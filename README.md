@@ -48,3 +48,9 @@ To make sure your theme is up to snuff, run the following commands once you're d
 composer install --no-interaction
 ./vendor/bin/phing -verbose
 ```
+
+## Replicating Sites
+If you are replicating a PSN site, consult the [replication guide](docs/REPLICATING.md) for further instructions.
+
+## Troubleshooting
+Consult the [troubleshooting guide](docs/TROUBLESHOOTING.md) for solutions to common problems.
