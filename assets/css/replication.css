@@ -1,9 +1,3 @@
-* {
-    -webkit-box-sizing: content-box !important;
-    -moz-box-sizing: content-box !important;
-    box-sizing: content-box !important;
-}
-
 .container {
     width: auto !important;
 }
