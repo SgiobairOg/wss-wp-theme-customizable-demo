@@ -26,3 +26,13 @@ function cws_widgets_init() {
 }
 
 add_action( 'widgets_init', 'cws_widgets_init' );
+
+/**
+ * Add the billing string for PSN.
+ */
+function cws_psn_billing() {	
+	echo '<!-- cwsplatform -->';
+}
+
+add_action( 'wp_footer', 'cws_psn_billing' );
+
