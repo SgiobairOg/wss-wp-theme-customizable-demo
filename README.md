@@ -34,6 +34,8 @@ git pull origin master
 At this point, you should get a merge conflict message. Do the following to resolve it and complete your theme repository's setup.
 ```bash
 git checkout --theirs README.md
+git add README.md
+git commit -m "Merge in template"
 git push -u origin master
 ```
 
