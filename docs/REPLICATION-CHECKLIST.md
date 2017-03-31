@@ -9,7 +9,7 @@
 
 ##Site Cloning
 - [ ] Download images from current site (for theme) -- save into assets/images (replace any spaces with dashes -- remember to change this in the code as well)
-- [ ] Save css and js files from current site into assets/css
+- [ ] Save css and js files from current site into assets/css -- primary css should be copied and pasted in style.css
 - [ ] Get template source code for home and interior pages using View Source
 - [ ] Replace all srcs and hrefs with the correct `<?php bloginfo ('stylesheet_directory');?>` path
 
