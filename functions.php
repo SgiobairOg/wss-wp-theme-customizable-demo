@@ -6,8 +6,8 @@
 function cws_widgets_init() {
 
     register_sidebar( array(
-        'name'          => 'Footer Widget Area',
-        'id'            => 'footer_widget_area',
+        'name'          => 'Featured Inventory Widget Area',
+        'id'            => 'featured_inventory_widget_area',
         'before_widget' => '<div class="widget ' . '%2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
@@ -15,8 +15,8 @@ function cws_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name'          => 'Home Widget Area',
-        'id'            => 'home_widget_area',
+        'name'          => 'Quick Search Widget Area',
+        'id'            => 'quick_search_widget_area',
         'before_widget' => '<div class="widget ' . '%2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
