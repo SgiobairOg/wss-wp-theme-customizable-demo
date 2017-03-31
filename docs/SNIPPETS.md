@@ -43,6 +43,18 @@ Hide default widget title: `.widget_featured_inventory > h2 { display: none; }`
 
 Hide carousel indicators: `.widget_featured_inventory .carousel-indicators { display: none !important; }`
 
-Various carousel-control styles: `#featured-inventory-carousel .carousel-control { color: #b9d306 !important; font-size: 48px !important; font-weight: bold; height: 48px !important; width: 48px !important; top: 50px !important; transform: translateY(0) !important; padding: 0; opacity: 1; }`
+Various carousel-control styles: ```
+#featured-inventory-carousel .carousel-control {
+  color: #b9d306 !important;
+  font-size: 48px !important;
+  font-weight: bold;
+  height: 48px !important;
+  width: 48px !important;
+  top: 50px !important;
+  transform: translateY(0) !important;
+  padding: 0;
+  opacity: 1;
+}
+```
 
 Model info text color: `#featured-inventory-carousel .featured-inventory-model-info { color: #fff !important; }`
