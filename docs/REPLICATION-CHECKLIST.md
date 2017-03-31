@@ -61,6 +61,7 @@
 - [ ] Paste content into the text-editor tab of the WP content section
 - [ ] Replace any srcs with the media library URL (ex. wp-content/uploads…)
 - [ ] Preview/publish the page
+
 *Note that some inventory/showroom pages have different content throughout -- we have special workarounds for this right now, so ask if you come across this*
 - [ ] After Inventory/showrooms has been added, update any missing inventory and showroom links throughout the site
 - [ ] Redirects
