@@ -19,6 +19,7 @@
 - [ ] Leave any meta og tags and replace values with wp tags
 - [ ] Save favicon in assets/images (if not already done)
 - [ ] Add link to style.css (or replace existing stylesheet link)
+- [ ] Add the viewport if it isn't already there
 - [ ] Move <?php wp_head();?> before closing </head> tag
 - [ ] Replace all srcs and hrefs with the correct `<?php bloginfo ('stylesheet_directory');?>` path
 - [ ] Replace the links in your hard-coded navigation with our link-naming convention
