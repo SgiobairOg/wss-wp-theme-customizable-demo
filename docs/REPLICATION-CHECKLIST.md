@@ -20,18 +20,18 @@
 - [ ] Save favicon in assets/images (if not already done)
 - [ ] Add link to style.css (or replace existing stylesheet link)
 - [ ] Add the [viewport](https://github.dominionenterprises.com/jaclyn-smith/wp-theme-template/blob/master/docs/SNIPPETS.md#viewport) if it isn't already there
-- [ ] Move <?php wp_head();?> before closing </head> tag
+- [ ] Move `<?php wp_head();?>` before closing </head> tag
 - [ ] Replace all srcs and hrefs with the correct `<?php bloginfo ('stylesheet_directory');?>` path
 - [ ] Replace the links in your hard-coded navigation with our link-naming convention
 
 ##Footer Setup
 - [ ] Grab consistent footer pieces (being sure to grab any necessary closing tags to complete header.php) and move into footer.php
 - [ ] Replace footer link [urls](https://github.dominionenterprises.com/jaclyn-smith/wp-theme-template/blob/master/docs/SNIPPETS.md#footer-urls)
-- [ ] Move <?php wp_footer();?> before closing </body> tag
+- [ ] Move `<?php wp_footer();?>` before closing </body> tag
 
 ##Page Templates
 - [ ] Paste home-only content into page-home.php (between `<?php get_header(); ?>` and `<?php get_footer(); ?>`)
-- [ ] Place <?php do_action( 'cws_content' ); ?> where dealer content should go
+- [ ] Place `<?php do_action( 'cws_content' ); ?>` where dealer content should go
 - [ ] Repeat for the interior template(s) -- then duplicate this for index.php and each page-.php file -- be careful not to disturb any logic or form-names on specific pages
 
 ##Widgets
