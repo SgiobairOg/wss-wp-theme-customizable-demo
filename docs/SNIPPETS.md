@@ -43,7 +43,8 @@ Hide default widget title: `.widget_featured_inventory > h2 { display: none; }`
 
 Hide carousel indicators: `.widget_featured_inventory .carousel-indicators { display: none !important; }`
 
-Various carousel-control styles: ```
+Various carousel-control styles:
+```
 #featured-inventory-carousel .carousel-control {
   color: #b9d306 !important;
   font-size: 48px !important;
