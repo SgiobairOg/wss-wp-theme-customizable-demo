@@ -16,17 +16,17 @@
 ##Header Setup
 - [ ] Grab consistent header pieces (including relevant content wrappers) and move into header.php
 - [ ] Delete any Visistat snippets
-- [ ] Leave any meta og tags and replace values with wp tags
+- [ ] Leave any meta og tags and [replace values with wp tags](https://github.dominionenterprises.com/jaclyn-smith/wp-theme-template/blob/master/docs/SNIPPETS.md#meta-tag-replacement)
 - [ ] Save favicon in assets/images (if not already done)
 - [ ] Add link to style.css (or replace existing stylesheet link)
-- [ ] Add the viewport if it isn't already there
+- [ ] Add the [viewport](https://github.dominionenterprises.com/jaclyn-smith/wp-theme-template/blob/master/docs/SNIPPETS.md#viewport) if it isn't already there
 - [ ] Move <?php wp_head();?> before closing </head> tag
 - [ ] Replace all srcs and hrefs with the correct `<?php bloginfo ('stylesheet_directory');?>` path
 - [ ] Replace the links in your hard-coded navigation with our link-naming convention
 
 ##Footer Setup
 - [ ] Grab consistent footer pieces (being sure to grab any necessary closing tags to complete header.php) and move into footer.php
-- [ ] Replace footer link urls
+- [ ] Replace footer link [urls](https://github.dominionenterprises.com/jaclyn-smith/wp-theme-template/blob/master/docs/SNIPPETS.md#footer-urls)
 - [ ] Move <?php wp_footer();?> before closing </body> tag
 
 ##Page Templates
@@ -35,14 +35,14 @@
 - [ ] Repeat for the interior template(s) -- then duplicate this for index.php and each page-.php file -- be careful not to disturb any logic or form-names on specific pages
 
 ##Widgets
-- [ ] Add widget areas wherever there is a quick search or featured inventory rotator
+- [ ] Add [widget areas](https://github.dominionenterprises.com/jaclyn-smith/wp-theme-template/blob/master/docs/SNIPPETS.md#widget-areas) wherever there is a quick search or featured inventory rotator
 
 ##Local Wordpress Setup
 - [ ] In local wordpress, activate theme
 - [ ] Add a ‘Home’ page to pages
 - [ ] Set ‘Home’ as static front page (Appearance > Customize)
 - [ ] Activate widget areas (Appearance > Widgets)
-- [ ] Add adjustments to style.css as necessary
+- [ ] Add [adjustments to style.css](https://github.dominionenterprises.com/jaclyn-smith/wp-theme-template/blob/master/docs/SNIPPETS.md#featured-inventory-style-adjustments) as necessary
 
 ##Deploying to Demo
 - [ ] Once the theme is ready, push your code to your origin (ex. git push origin CUP-100)
