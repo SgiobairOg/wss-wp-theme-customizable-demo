@@ -36,3 +36,4 @@ function cws_psn_billing() {
 
 add_action( 'wp_footer', 'cws_psn_billing' );
 
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
