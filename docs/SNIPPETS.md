@@ -57,5 +57,12 @@ Various carousel-control styles:
   opacity: 1;
 }
 ```
+Inventory/Showroom fix for narrow unresponsive sites:
+```
+.inv-search-container .col-md-3,
+.showroom .col-md-4 { 
+  width: 50%; 
+}
+```
 
 Model info text color: `#featured-inventory-carousel .featured-inventory-model-info { color: #fff !important; }`
