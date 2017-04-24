@@ -36,6 +36,14 @@ a href="/site-map">Site Map</a>
 <?php endif; ?>
 ```
 
+##Inventory/Showroom fix for narrow unresponsive sites:
+```
+.inv-search-container .col-md-3,
+.showroom .col-md-4 { 
+  width: 50%; 
+}
+```
+
 ##Featured Inventory Style adjustments
 Add space above widget: `.widget_featured_inventory { margin-top: 10px; }`
 
@@ -55,13 +63,6 @@ Various carousel-control styles:
   transform: translateY(0) !important;
   padding: 0;
   opacity: 1;
-}
-```
-Inventory/Showroom fix for narrow unresponsive sites:
-```
-.inv-search-container .col-md-3,
-.showroom .col-md-4 { 
-  width: 50%; 
 }
 ```
 
