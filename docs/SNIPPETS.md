@@ -15,15 +15,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-##Footer URLs
-```
-<a href="/policy">Policies</a>
-<a href="/privacy">Privacy</a>
-<a href="/terms">Terms & Conditions</a>
-<a href="/disclaimer">Disclaimer</a>
-a href="/site-map">Site Map</a>
-```
-
 ##Widget areas
 ```
 <?php if ( is_active_sidebar( 'featured_inventory_widget_area' ) ) : ?>
