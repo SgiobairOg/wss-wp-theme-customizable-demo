@@ -30,8 +30,17 @@
 ##Inventory/Showroom fix for narrow unresponsive sites:
 ```
 .inv-search-container .col-md-3,
-.showroom .col-md-4 { 
+.showroom .col-md-4,
+.showroom-model .col-md-4,
+.showroom-model .col-lg-3 { 
   width: 50%; 
+}
+.model-display .col-md-7,
+.model-display .col-md-5,
+.inventory-container .col-md-7,
+.inventory-container .col-md-5 {
+  width: 100%;
+  margin-bottom: 10px;
 }
 ```
 
