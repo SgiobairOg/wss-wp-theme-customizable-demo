@@ -31,6 +31,7 @@
 ```
 .inv-search-container .col-md-3,
 .showroom .col-md-4,
+.showroom .col-lg-3,
 .showroom-model .col-md-4,
 .showroom-model .col-lg-3 { 
   width: 50%; 
