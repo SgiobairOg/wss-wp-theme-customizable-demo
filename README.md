@@ -28,7 +28,7 @@ cd wp-theme-<domain>
 git remote rm origin
 git remote add origin git@github.dominionenterprises.com:my-username/wp-theme-<domain>
 git remote add upstream git@github.dominionenterprises.com:TOL-CWS-Sites/wp-theme-<domain>
-git pull origin master
+git pull origin master --allow-unrelated-histories
 ```
 
 At this point, you should get a merge conflict message. Do the following to resolve it and complete your theme repository's setup.
