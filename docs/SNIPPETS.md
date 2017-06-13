@@ -1,6 +1,6 @@
-#Important Code Snippets
+# Important Code Snippets
 
-##Meta Tag Replacement
+## Meta Tag Replacement
 ```
 <title><?php wp_title();?></title>
 <meta property="og:url" content="<?php bloginfo('url');?>"/>
@@ -10,12 +10,12 @@
 <link rel="canonical" href="<?php bloginfo('url');?>">
 ```
 
-##Viewport
+## Viewport
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-##Widget areas
+## Widget areas
 ```
 <?php if ( is_active_sidebar( 'featured_inventory_widget_area' ) ) : ?>
     <?php dynamic_sidebar( 'featured_inventory_widget_area' ); ?>
@@ -27,7 +27,7 @@
 <?php endif; ?>
 ```
 
-##Inventory/Showroom fix for narrow unresponsive sites:
+## Inventory/Showroom fix for narrow unresponsive sites:
 ```
 .inv-search-container .col-md-3,
 .showroom .col-md-4,
@@ -45,7 +45,7 @@
 }
 ```
 
-##Quote modal falling under nav and overlay fix (add to head):
+## Quote modal falling under nav and overlay fix (add to head):
 ```
 <script type="text/javascript">
     $(function () {
@@ -54,7 +54,7 @@
  </script>
 ```
 
-##Featured Inventory Style adjustments
+## Featured Inventory Style adjustments
 Add space above widget:
 ```
 .widget_featured_inventory { margin-top: 10px; }
