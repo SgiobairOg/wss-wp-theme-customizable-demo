@@ -45,12 +45,30 @@
 }
 ```
 
+##Quote modal falling under nav and overlay fix (add to head):
+```
+<script type="text/javascript">
+    $(function () {
+        $("#quoteModal").appendTo("body");
+    });
+ </script>
+```
+
 ##Featured Inventory Style adjustments
-Add space above widget: `.widget_featured_inventory { margin-top: 10px; }`
+Add space above widget:
+```
+.widget_featured_inventory { margin-top: 10px; }
+```
 
-Hide default widget title: `.widget_featured_inventory > h2 { display: none; }`
+Hide default widget title:
+```
+.widget_featured_inventory > h2 { display: none; }
+```
 
-Hide carousel indicators: `.widget_featured_inventory .carousel-indicators { display: none !important; }`
+Hide carousel indicators:
+```
+.widget_featured_inventory .carousel-indicators { display: none !important; }
+```
 
 Various carousel-control styles:
 ```
@@ -67,4 +85,7 @@ Various carousel-control styles:
 }
 ```
 
-Model info text color: `#featured-inventory-carousel .featured-inventory-model-info { color: #fff !important; }`
+Model info text color: 
+```
+#featured-inventory-carousel .featured-inventory-model-info { color: #fff !important; }
+```
