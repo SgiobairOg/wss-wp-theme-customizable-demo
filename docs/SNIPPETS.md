@@ -3,10 +3,6 @@
 ## Meta Tag Replacement
 ```
 <title><?php wp_title();?></title>
-<meta property="og:url" content="<?php bloginfo('url');?>"/>
-<meta property="og:image" content="Empty"/>
-<meta property="og:title" content="<?php wp_title();?>"/>
-<meta property="og:description" content="<?php bloginfo('description');?>"/>
 <link rel="canonical" href="<?php bloginfo('url');?>">
 ```
 
