@@ -1,6 +1,19 @@
 <?php
 
 /**
+ * Load all of the necessary CSS and JavaScript.
+ */
+add_action( 'wp_enqueue_scripts', function () {
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-1.12.4.min.js', [ ], false, true );
+
+    wp_enqueue_script( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', [], null, true );
+    wp_enqueue_style( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
+
+    wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+} );
+
+/**
  * Register our sidebars/widgetized areas.
  */
 function cws_widgets_init() {
