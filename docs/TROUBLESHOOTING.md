@@ -32,3 +32,22 @@ Verify that the plugins you need are installed and activated. Below is a table m
 | ------ | ------ |
 | Quick Search | CWS Inventory |
 | Featured Inventory | CWS Inventory |
+
+## My hero carousel isn't transitioning properly
+Delete the carousel.css file, and remove the call from your header.
+
+## My featured inventory widget isn't working correctly
+If you are getting either of the following errors -- `JavaScript requires jQuery version 1.9.1 or higher, but lower than version 4` or `$inventoryCarousel.carousel is not a function` -- remove the jquery call(s) from your header and add the following inside functions.php:
+```
+add_action( 'wp_enqueue_scripts', function () {
+    wp_deregister_script( 'jquery' );
+    wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-1.12.4.min.js', [ ], false, true );
+});
+```
+
+## My featured inventory is being affected by styles on the hero carousel
+Find the name of the div containing the hero carousel.
+In the original css, find all `.carousel`, `.carousel-inner`, `.item`, `.carousel-indicators`, `.carousel-control` (and any related generic styles) -- add the container name in front of them.
+_ex._ `.carousel { width: 300px; }` should become `#hero-spot .carousel { width: 300px; }`
+
+The same method applies if the .carousel rotation _script_ is affecting your featured inventory -- add the name of the container div in front of the `.carousel` inside the script.
