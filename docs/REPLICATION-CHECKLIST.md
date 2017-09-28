@@ -14,7 +14,7 @@
 - [ ] Replace all srcs and hrefs with the correct `<?php bloginfo ('stylesheet_directory');?>` path
 
 ## Header Setup
-- [ ] Grab consistent header pieces (including relevant content wrappers) and move into header.php
+- [ ] Cut everything below the content section and move into footer.php
 - [ ] Delete any Visistat snippets
 - [ ] Delete any Google Analytics snippets -- save the UA number in a JIRA comment
 - [ ] [Replace title tag with wp tag](https://github.dominionenterprises.com/TOL-CWS-Sites/wp-theme-template/blob/master/docs/SNIPPETS.md#meta-tag-replacement)
@@ -38,14 +38,14 @@ to this
 $('#hero_spot .carousel').carousel({
 ```
 this means "div with class 'carousel' inside div with id of 'hero_spot'"
-- [ ] Move `<?php wp_head();?>` before closing </head> tag
+- [ ] Move `<?php wp_head();?>` before closing `</head>` tag
 - [ ] Replace the links in your hard-coded navigation with our link-naming convention
 - [ ] If your MenuAnchor has a z-index larger than 999, change the z-index to 999
 
 ## Footer Setup
 - [ ] Grab consistent footer pieces (being sure to grab any necessary closing tags to complete header.php) and move into footer.php
 - [ ] Replace footer links with the footer plugin tag:  `<?php do_action('cws_footer'); ?>`
-- [ ] Move `<?php wp_footer();?>` before closing </body> tag
+- [ ] Move `<?php wp_footer();?>` before closing `</body>` tag
 
 ## Page Templates
 - [ ] Paste home-only content into page-home.php (between `<?php get_header(); ?>` and `<?php get_footer(); ?>`)
