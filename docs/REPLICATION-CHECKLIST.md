@@ -16,6 +16,7 @@
 ## Header Setup
 - [ ] Grab consistent header pieces (including relevant content wrappers) and move into header.php
 - [ ] Delete any Visistat snippets
+- [ ] Delete any Google Analytics snippets -- save the UA number in a JIRA comment
 - [ ] [Replace title tag with wp tag](https://github.dominionenterprises.com/TOL-CWS-Sites/wp-theme-template/blob/master/docs/SNIPPETS.md#meta-tag-replacement)
 - [ ] Remove any meta property="og" tags
 - [ ] Delete all jquery and bootstrap call-ins (these are now automatically being added inside functions.php)
