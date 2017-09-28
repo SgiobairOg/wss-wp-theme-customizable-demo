@@ -9,7 +9,7 @@
 
 ## Site Cloning
 - [ ] Download all theme assets/images from current site (including css files) -- save into appropriate subdirectory of assets (replace any spaces with dashes -- remember to change this in the code as well)
-- [ ] Save css and js files from current site into assets/css -- primary css should be copied and pasted in style.css
+- [ ] Save css and js files from current site into appropriate assets subfolder -- primary css should be copied and pasted in style.css
 - [ ] Get template source code for home page using View Source, and paste into header -- delete content and old widgets (for featured inventory, delete the entire class="style5container" table; if your rotator or quick search is still directly inside of a table, add a <tr><td> around the widget as needed, then close the tags)
 - [ ] Replace all srcs and hrefs with the correct `<?php bloginfo ('stylesheet_directory');?>` path
 
