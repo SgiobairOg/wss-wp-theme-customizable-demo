@@ -10,7 +10,7 @@
             break;
 
         default:
-            $description;
+            $description = ' ';
             break;
     }
     echo $description;
